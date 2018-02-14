@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D42A7EC20341EE600A0D1AE /* RNPKAddPassButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D42A7E420341EE600A0D1AE /* RNPKAddPassButtonManager.m */; };
+		6D42A7ED20341EE600A0D1AE /* RCTConvert+RNPassKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D42A7E720341EE600A0D1AE /* RCTConvert+RNPassKit.m */; };
+		6D42A7EE20341EE600A0D1AE /* RNPKAddPassButtonContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D42A7E820341EE600A0D1AE /* RNPKAddPassButtonContainer.m */; };
+		6D42A7EF20341EE600A0D1AE /* RNPassKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D42A7E920341EE600A0D1AE /* RNPassKit.m */; };
+		6D42A7F220341F2000A0D1AE /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D42A7F120341F2000A0D1AE /* PassKit.framework */; };
+		6D42A7F32034209A00A0D1AE /* RNPassKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D42A7E520341EE600A0D1AE /* RNPassKit.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6D42A7D620341E6800A0D1AE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				6D42A7F32034209A00A0D1AE /* RNPassKit.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6D42A7D820341E6800A0D1AE /* libRNPassKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPassKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D42A7E420341EE600A0D1AE /* RNPKAddPassButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNPKAddPassButtonManager.m; sourceTree = "<group>"; };
+		6D42A7E520341EE600A0D1AE /* RNPassKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPassKit.h; sourceTree = "<group>"; };
+		6D42A7E620341EE600A0D1AE /* RCTConvert+RNPassKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTConvert+RNPassKit.h"; sourceTree = "<group>"; };
+		6D42A7E720341EE600A0D1AE /* RCTConvert+RNPassKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+RNPassKit.m"; sourceTree = "<group>"; };
+		6D42A7E820341EE600A0D1AE /* RNPKAddPassButtonContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNPKAddPassButtonContainer.m; sourceTree = "<group>"; };
+		6D42A7E920341EE600A0D1AE /* RNPassKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNPassKit.m; sourceTree = "<group>"; };
+		6D42A7EA20341EE600A0D1AE /* RNPKAddPassButtonContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPKAddPassButtonContainer.h; sourceTree = "<group>"; };
+		6D42A7EB20341EE600A0D1AE /* RNPKAddPassButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPKAddPassButtonManager.h; sourceTree = "<group>"; };
+		6D42A7F120341F2000A0D1AE /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D42A7D520341E6800A0D1AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D42A7F220341F2000A0D1AE /* PassKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D42A7CF20341E6800A0D1AE = {
+			isa = PBXGroup;
+			children = (
+				6D42A7DA20341E6800A0D1AE /* RNPassKit */,
+				6D42A7D920341E6800A0D1AE /* Products */,
+				6D42A7F020341F2000A0D1AE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D42A7D920341E6800A0D1AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D42A7D820341E6800A0D1AE /* libRNPassKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D42A7DA20341E6800A0D1AE /* RNPassKit */ = {
+			isa = PBXGroup;
+			children = (
+				6D42A7E520341EE600A0D1AE /* RNPassKit.h */,
+				6D42A7E920341EE600A0D1AE /* RNPassKit.m */,
+				6D42A7E620341EE600A0D1AE /* RCTConvert+RNPassKit.h */,
+				6D42A7E720341EE600A0D1AE /* RCTConvert+RNPassKit.m */,
+				6D42A7EA20341EE600A0D1AE /* RNPKAddPassButtonContainer.h */,
+				6D42A7E820341EE600A0D1AE /* RNPKAddPassButtonContainer.m */,
+				6D42A7EB20341EE600A0D1AE /* RNPKAddPassButtonManager.h */,
+				6D42A7E420341EE600A0D1AE /* RNPKAddPassButtonManager.m */,
+			);
+			path = RNPassKit;
+			sourceTree = "<group>";
+		};
+		6D42A7F020341F2000A0D1AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D42A7F120341F2000A0D1AE /* PassKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D42A7D720341E6800A0D1AE /* RNPassKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D42A7E120341E6900A0D1AE /* Build configuration list for PBXNativeTarget "RNPassKit" */;
+			buildPhases = (
+				6D42A7D420341E6800A0D1AE /* Sources */,
+				6D42A7D520341E6800A0D1AE /* Frameworks */,
+				6D42A7D620341E6800A0D1AE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNPassKit;
+			productName = RNPassKit;
+			productReference = 6D42A7D820341E6800A0D1AE /* libRNPassKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D42A7D020341E6800A0D1AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Masayuki Iwai";
+				TargetAttributes = {
+					6D42A7D720341E6800A0D1AE = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 6D42A7D320341E6800A0D1AE /* Build configuration list for PBXProject "RNPassKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6D42A7CF20341E6800A0D1AE;
+			productRefGroup = 6D42A7D920341E6800A0D1AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D42A7D720341E6800A0D1AE /* RNPassKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D42A7D420341E6800A0D1AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D42A7EC20341EE600A0D1AE /* RNPKAddPassButtonManager.m in Sources */,
+				6D42A7EF20341EE600A0D1AE /* RNPassKit.m in Sources */,
+				6D42A7ED20341EE600A0D1AE /* RCTConvert+RNPassKit.m in Sources */,
+				6D42A7EE20341EE600A0D1AE /* RNPKAddPassButtonContainer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6D42A7DF20341E6900A0D1AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6D42A7E020341E6900A0D1AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D42A7E220341E6900A0D1AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SCQWQB3MYR;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D42A7E320341E6900A0D1AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SCQWQB3MYR;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D42A7D320341E6800A0D1AE /* Build configuration list for PBXProject "RNPassKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D42A7DF20341E6900A0D1AE /* Debug */,
+				6D42A7E020341E6900A0D1AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D42A7E120341E6900A0D1AE /* Build configuration list for PBXNativeTarget "RNPassKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D42A7E220341E6900A0D1AE /* Debug */,
+				6D42A7E320341E6900A0D1AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D42A7D020341E6800A0D1AE /* Project object */;
+}
