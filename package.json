@@ -1,6 +1,6 @@
 {
   "name": "react-native-passkit-wallet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Native module to handle PassKit.",
   "main": "index",
   "scripts": {
@@ -30,10 +30,8 @@
     "eslint-plugin-flowtype": "^2.38.0",
     "eslint-plugin-react": "^7.3.0",
     "flow-bin": "^0.61.0",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-native": "^0.52.0"
-  },
-  "dependencies": {
-    "prop-types": "^15.6.0"
   }
 }
