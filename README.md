@@ -3,7 +3,7 @@ React Native module to handle PassKit.
 
 ## Usage
 ```jsx
-import { PassKit, AddPassButton } from 'react-native-passkit-wallet'
+import PassKit, { AddPassButton } from 'react-native-passkit-wallet'
 ```
 
 ### Check whether the device supports adding passes

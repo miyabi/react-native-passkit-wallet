@@ -6,7 +6,7 @@
 
 import type EmitterSubscription from 'EmitterSubscription'
 
-const PassKit = {
+export default {
   canAddPasses: (): Promise<boolean> => (
     Promise.resolve(false)
   ),
@@ -25,5 +25,3 @@ const PassKit = {
 
   removeEventListener: (eventType: string, listener: Function): void => {},
 }
-
-module.exports = { PassKit }

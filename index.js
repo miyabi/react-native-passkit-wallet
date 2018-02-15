@@ -3,5 +3,8 @@
  */
 'use strict'
 
-export { PassKit } from './PassKit'
-export { AddPassButton } from './AddPassButton'
+import PassKit from './PassKit'
+import { AddPassButton } from './AddPassButton'
+
+export default PassKit
+export { AddPassButton }

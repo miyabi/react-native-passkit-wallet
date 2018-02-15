@@ -10,7 +10,7 @@ import type EmitterSubscription from 'EmitterSubscription'
 const nativeModule = NativeModules.RNPassKit
 const nativeEventEmitter = new NativeEventEmitter(nativeModule)
 
-const PassKit = {
+export default {
   ...nativeModule,
 
   addEventListener: (
@@ -25,5 +25,3 @@ const PassKit = {
     nativeEventEmitter.removeListener(eventType, listener)
   },
 }
-
-module.exports = { PassKit }
