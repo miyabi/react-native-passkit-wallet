@@ -18,7 +18,7 @@ RCT_EXPORT_METHOD(canAddPasses:(RCTPromiseResolveBlock)resolve
   resolve(@([PKAddPassesViewController canAddPasses]));
 }
 
-RCT_EXPORT_METHOD(presentAddPassesViewController:(NSString *)base64Encoded
+RCT_EXPORT_METHOD(addPass:(NSString *)base64Encoded
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejector:(RCTPromiseRejectBlock)reject) {
   NSData *data = [[NSData alloc] initWithBase64EncodedString:base64Encoded options:NSUTF8StringEncoding];
