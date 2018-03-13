@@ -12,6 +12,10 @@ const nativeEventEmitter = new NativeEventEmitter(nativeModule)
 export default {
   ...nativeModule,
 
+  addPass: (base64Encoded: string, fileProvider?: string): Promise<void> => {
+    return nativeModule.addPass(base64Encoded)
+  },
+
   presentAddPassesViewController: (base64Encoded: string): Promise<void> => {
     console.warn('PassKit.presentAddPassesViewController is deprecated. Use PassKit.addPass instead.')
     return nativeModule.addPass(base64Encoded)

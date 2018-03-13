@@ -17,7 +17,6 @@ import java.io.FileOutputStream;
 import java.util.UUID;
 
 public class RNPassKitModule extends ReactContextBaseJavaModule {
-	private final String FILE_PROVIDER = "com.mybdesign.RNPassKit.fileprovider";
 	private final String PKPASS_TYPE = "application/vnd.apple.pkpass";
 
 	public RNPassKitModule(ReactApplicationContext reactContext) {
@@ -48,7 +47,7 @@ public class RNPassKitModule extends ReactContextBaseJavaModule {
 	}
 
 	@ReactMethod
-	public void addPass(String base64Encoded, Promise promise) {
+	public void addPass(String base64Encoded, String fileProvider, Promise promise) {
 		try {
 			Context context = getReactApplicationContext();
 
@@ -58,7 +57,7 @@ public class RNPassKitModule extends ReactContextBaseJavaModule {
 			stream.flush();
 			stream.close();
 
-			Uri uri = FileProvider.getUriForFile(context, FILE_PROVIDER, file);
+			Uri uri = FileProvider.getUriForFile(context, fileProvider, file);
 			Intent intent = this.intentWithContentUri(uri, PKPASS_TYPE);
 			context.startActivity(intent);
 			promise.resolve(null);

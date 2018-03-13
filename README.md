@@ -26,7 +26,7 @@ React Native module to handle PassKit pass.
         ...
     +   <provider
     +     android:name="android.support.v4.content.FileProvider"
-    +     android:authorities="com.mybdesign.RNPassKit.fileprovider"
+    +     android:authorities="com.yourcompany.fileprovider"
     +     android:grantUriPermissions="true"
     +     android:exported="false">
     +     <meta-data
@@ -71,7 +71,12 @@ For Android, `true` will be returned if apps that can open pkpass files are inst
 PassKit.addPass(base64EncodedPass)
 ```
 
-For Android, a dialogue box will appear to choose an app to open the pass.
+For Android, file provider has to be specified for the second argument.
+And a dialogue box will appear to choose an app to open the pass.
+
+```jsx
+PassKit.addPass(base64EncodedPass, 'com.yourcompany.fileprovider')
+```
 
 ### Display a button that enables users to add passes to Wallet (iOS only)
 
