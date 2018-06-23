@@ -64,6 +64,10 @@ RCT_EXPORT_METHOD(addPass:(NSString *)base64Encoded
            };
 }
 
++ (BOOL)requiresMainQueueSetup {
+    return YES;
+}
+
 #pragma mark - PKAddPassesViewControllerDelegate
 
 - (void)addPassesViewControllerDidFinish:(PKAddPassesViewController *)controller {
