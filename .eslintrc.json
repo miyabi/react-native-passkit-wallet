@@ -38,6 +38,6 @@
       "never"
     ],
     "no-unused-vars": ["warn", { "args": "none" }],
-    "no-console": "off"
+    "react/prop-types": "off"
   }
 }
