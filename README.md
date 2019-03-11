@@ -3,20 +3,59 @@ React Native module to handle PassKit pass.
 
 ## Installation
 
-1.  Install library from `npm`
+### 1. Install library from `npm`
 
-    ```shell
-    npm install --save react-native-passkit-wallet
-    ```
+```shell
+npm install --save react-native-passkit-wallet
+```
 
-1.  Link native code
+### 2. Link native code
 
-    ```shell
-    react-native link react-native-passkit-wallet
-    ```
+You can link native code in the way you prefer:
 
+#### CocoaPods
 
-### Android configuration
+Add line to your project target section in your Podfile:
+
+```diff
+target 'YourProjectTarget' do
+
++   pod 'react-native-passkit-wallet', path: '../node_modules/react-native-passkit-wallet'
+
+end
+```
+
+If you received error `jest-haste-map: Haste module naming collision: Duplicate module name: react-native`, add lines below to your Podfile and reinstall pods.
+
+```diff
+target 'YourProjectTarget' do
+
++   rn_path = '../node_modules/react-native'
++   pod 'yoga', path: "#{rn_path}/ReactCommon/yoga/yoga.podspec"
++   pod 'React', path: rn_path
+
+  pod 'react-native-passkit-wallet', path: '../node_modules/react-native-passkit-wallet'
+
+end
+
++ post_install do |installer|
++   installer.pods_project.targets.each do |target|
++     if target.name == "React"
++       target.remove_from_project
++     end
++   end
++ end
+```
+
+#### react-native link
+
+Run command below:
+
+```shell
+react-native link react-native-passkit-wallet
+```
+
+### 3. Android configuration
 
 1.  Add following lines to AndroidManifest.xml
 
@@ -28,10 +67,12 @@ React Native module to handle PassKit pass.
     +     android:name="android.support.v4.content.FileProvider"
     +     android:authorities="com.yourcompany.fileprovider"
     +     android:grantUriPermissions="true"
-    +     android:exported="false">
+    +     android:exported="false"
+    +     tools:replace="android:authorities">
     +     <meta-data
     +       android:name="android.support.FILE_PROVIDER_PATHS"
-    +       android:resource="@xml/passkit_file_paths" />
+    +       android:resource="@xml/passkit_file_paths"
+    +       tools:replace="android:resource" />
     +   </provider>
       </application>
     </manifest>
