@@ -60,18 +60,17 @@ RCT_EXPORT_METHOD(containsPass:(NSString *)identifier
     reject(@"", @"Unable to access passes.", nil);
     return;
   }
-  
+
   PKPassLibrary *passLib = [[PKPassLibrary alloc] init];
 
   PKPass *pass = [passLib passWithPassTypeIdentifier:identifier serialNumber: serialNumber];
 
   if (!pass) {
     reject(@"", @"Couldn't get pass.", nil);
+    return;
   }
 
-  BOOL hasPass = [passLib containsPass:pass];
-
-  resolve([NSNumber numberWithBool:hasPass]);
+  resolve(@([passLib containsPass:pass]));
 }
 
 - (NSDictionary *)constantsToExport {
