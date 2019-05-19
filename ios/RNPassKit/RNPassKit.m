@@ -29,7 +29,7 @@ RCT_EXPORT_METHOD(addPass:(NSString *)base64Encoded
     reject(@"", @"Failed to create pass.", error);
     return;
   }
-  
+
   dispatch_async(dispatch_get_main_queue(), ^{
     UIApplication *sharedApplication = RCTSharedApplication();
     UIWindow *window = sharedApplication.keyWindow;
@@ -45,15 +45,39 @@ RCT_EXPORT_METHOD(addPass:(NSString *)base64Encoded
         return;
       }
     }
-    
+
     reject(@"", @"Failed to present PKAddPassesViewController.", nil);
   });
+}
+
+RCT_EXPORT_METHOD(containsPass:(NSString *)identifier
+                  andSerialNumber:(NSString *)serialNumber
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejector:(RCTPromiseRejectBlock)reject) {
+  BOOL passLibraryAvailable = [PKPassLibrary isPassLibraryAvailable];
+
+  if (!passLibraryAvailable) {
+    reject(@"", @"Unable to access passes.", nil);
+    return;
+  }
+  
+  PKPassLibrary *passLib = [[PKPassLibrary alloc] init];
+
+  PKPass *pass = [passLib passWithPassTypeIdentifier:identifier serialNumber: serialNumber];
+
+  if (!pass) {
+    reject(@"", @"Couldn't get pass.", nil);
+  }
+
+  BOOL hasPass = [passLib containsPass:pass];
+
+  resolve([NSNumber numberWithBool:hasPass]);
 }
 
 - (NSDictionary *)constantsToExport {
   PKAddPassButton *addPassButton = [[PKAddPassButton alloc] initWithAddPassButtonStyle:PKAddPassButtonStyleBlack];
   [addPassButton layoutIfNeeded];
-  
+
   return @{
            @"AddPassButtonStyle": @{
                @"black": @(PKAddPassButtonStyleBlack),
