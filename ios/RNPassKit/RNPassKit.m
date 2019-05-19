@@ -66,7 +66,7 @@ RCT_EXPORT_METHOD(containsPass:(NSString *)identifier
   PKPass *pass = [passLib passWithPassTypeIdentifier:identifier serialNumber: serialNumber];
 
   if (!pass) {
-    reject(@"", @"Couldn't get pass.", nil);
+    resolve(@(NO));
     return;
   }
 
