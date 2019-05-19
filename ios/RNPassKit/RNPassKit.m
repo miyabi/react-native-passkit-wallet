@@ -50,25 +50,24 @@ RCT_EXPORT_METHOD(addPass:(NSString *)base64Encoded
   });
 }
 
-RCT_EXPORT_METHOD(containsPass:(NSString *)identifier
-                  andSerialNumber:(NSString *)serialNumber
+RCT_EXPORT_METHOD(containsPass:(NSString *)base64Encoded
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejector:(RCTPromiseRejectBlock)reject) {
-  BOOL passLibraryAvailable = [PKPassLibrary isPassLibraryAvailable];
+  NSData *data = [[NSData alloc] initWithBase64EncodedString:base64Encoded options:NSUTF8StringEncoding];
+  NSError *error;
+  PKPass *pass = [[PKPass alloc] initWithData:data error:&error];
 
-  if (!passLibraryAvailable) {
-    reject(@"", @"Unable to access passes.", nil);
+  if (error) {
+    reject(@"", @"Failed to create pass.", error);
     return;
+  }
+
+  BOOL passLibraryAvailable = [PKPassLibrary isPassLibraryAvailable];
+  if (!passLibraryAvailable) {
+    resolve(@(NO));
   }
 
   PKPassLibrary *passLib = [[PKPassLibrary alloc] init];
-
-  PKPass *pass = [passLib passWithPassTypeIdentifier:identifier serialNumber: serialNumber];
-
-  if (!pass) {
-    resolve(@(NO));
-    return;
-  }
 
   resolve(@([passLib containsPass:pass]));
 }

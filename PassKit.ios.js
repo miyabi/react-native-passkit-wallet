@@ -24,11 +24,8 @@ export default {
     return nativeModule.addPass(base64Encoded);
   },
 
-  containsPass: (
-    identifier: string,
-    serialNumber: string
-  ): Promise<boolean> => {
-    return nativeModule.containsPass(identifier, serialNumber);
+  containsPass: (base64Encoded: string): Promise<boolean> => {
+    return nativeModule.containsPass(base64Encoded);
   },
 
   addEventListener: (
