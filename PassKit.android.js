@@ -1,29 +1,33 @@
 /**
  * @flow
  */
-'use strict'
+"use strict";
 
-import { NativeModules } from 'react-native'
-import type EmitterSubscription from 'EmitterSubscription'
+import { NativeModules } from "react-native";
+import type EmitterSubscription from "EmitterSubscription";
 
-const nativeModule = NativeModules.RNPassKit
+const nativeModule = NativeModules.RNPassKit;
 
 export default {
   ...nativeModule,
 
   presentAddPassesViewController: (base64Encoded: string): Promise<void> => {
     // eslint-disable-next-line no-console
-    console.warn('PassKit.presentAddPassesViewController is deprecated. Use PassKit.addPass instead.')
-    return nativeModule.addPass(base64Encoded)
+    console.warn(
+      "PassKit.presentAddPassesViewController is deprecated. Use PassKit.addPass instead."
+    );
+    return nativeModule.addPass(base64Encoded);
+  },
+
+  containsPass: (base64Encoded: string): Promise<boolean> => {
+    console.warn("PassKit.containsPass is not implemented on android.");
   },
 
   addEventListener: (
     eventType: string,
     listener: Function,
-    context: ?Object,
-  ): ?EmitterSubscription => (
-    null
-  ),
+    context: ?Object
+  ): ?EmitterSubscription => null,
 
-  removeEventListener: (eventType: string, listener: Function): void => {},
-}
+  removeEventListener: (eventType: string, listener: Function): void => {}
+};
