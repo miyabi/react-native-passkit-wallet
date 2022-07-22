@@ -1,3 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mybdesign.RNPassKit">
+  package="com.mybdesign.RNPassKit">
+  <queries>
+    <intent>  
+      <action android:name="android.intent.action.VIEW" />  
+      <data android:mimeType="application/vnd.apple.pkpass" />  
+    </intent>  
+  </queries>
 </manifest>
