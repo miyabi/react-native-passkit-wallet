@@ -60,11 +60,14 @@ react-native link react-native-passkit-wallet
 1.  Add following lines to AndroidManifest.xml
 
     ```diff
-    <manifest ...>
+    <manifest
+      ...
+    + xmlns:tools="http://schemas.android.com/tools"
+    >
       <application ...>
         ...
     +   <provider
-    +     android:name="android.support.v4.content.FileProvider"
+    +     android:name="androidx.core.content.FileProvider"
     +     android:authorities="com.yourcompany.fileprovider"
     +     android:grantUriPermissions="true"
     +     android:exported="false"
@@ -80,7 +83,7 @@ react-native link react-native-passkit-wallet
 
 1.  Create passkit_file_paths.xml
 
-    Create `passkit_file_paths.xml` file in your project's `android/src/main/res/xml` directory.
+    Create `passkit_file_paths.xml` file in your project's `android/app/src/main/res/xml` directory.
     pkpass file will be created in your app's cache directory.
 
     ```xml
@@ -117,6 +120,12 @@ And a dialogue box will appear to choose an app to open the pass.
 
 ```jsx
 PassKit.addPass(base64EncodedPass, 'com.yourcompany.fileprovider')
+```
+
+### Check whether the user’s pass library contains the specified pass (iOS only)
+
+```jsx
+PassKit.containsPass(base64EncodedPass)
 ```
 
 ### Display a button that enables users to add passes to Wallet (iOS only)
