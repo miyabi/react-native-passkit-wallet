@@ -16,6 +16,10 @@ export default {
     return nativeModule.addPass(base64Encoded)
   },
 
+  getUrlFromPass: (passTypeIdentifier: string, serialNumber: string): Promise<string>  => {
+    return nativeModule.getUrlFromPass(passTypeIdentifier, serialNumber)
+  },
+
   presentAddPassesViewController: (base64Encoded: string): Promise<void> => {
     // eslint-disable-next-line no-console
     console.warn(

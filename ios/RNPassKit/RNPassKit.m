@@ -46,6 +46,19 @@ RCT_EXPORT_METHOD(addPass:(NSString *)base64Encoded
   });
 }
 
+RCT_EXPORT_METHOD(getUrlFromPass:(NSString *)withPassTypeIdentifier
+                  serialNumber:(NSString *)serialNumber
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejector:(RCTPromiseRejectBlock)reject) {
+  PKPassLibrary *passLibrary = [[PKPassLibrary alloc] init];
+  PKPass *pass = [passLibrary passWithPassTypeIdentifier:withPassTypeIdentifier serialNumber:serialNumber];
+  if (pass) {
+    resolve(pass.passURL.absoluteString);
+  } else {
+    reject(@"", @"Pass not found.\nMake sure your app has the Wallet capability.", nil);
+  }
+}
+
 RCT_EXPORT_METHOD(containsPass:(NSString *)base64Encoded
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejector:(RCTPromiseRejectBlock)reject) {
